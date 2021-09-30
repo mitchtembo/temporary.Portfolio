@@ -1,0 +1,71 @@
+// container 
+
+.container {
+ max-width: $website-width;
+ padding: 0 1.5rem;
+ margin: auto;
+ //so that nothing spills out
+ overflow: auto;
+}
+//buttons
+%btn-shared {
+ display: inline-block;
+ border: none;
+ cursor: pointer;
+ padding: .8rem 2rem;
+ transition: all 0.5;
+}
+
+.btn {
+
+ &-main {
+  @extend %btn-shared;
+  background: $main-color;
+  color: #ccc;
+ }
+ &-dark {
+  @extend %btn-shared;
+  background: $dark-color;
+  color: #f4f4f4;
+ }
+ &-light {
+  @extend %btn-shared;
+  background: $light-color;
+  color: $dark-color;
+ }
+}
+
+button[class^="btn-"]:hover,
+a[class^="btn-"]:hover,
+input[class^="btn-"] {
+ background: $main-color;
+}
+.bottom-line{
+ border:  1px solid $main-color;
+ margin: auto;
+ width: 3rem;
+
+}
+
+.lead {
+ font-size: 20px;
+ padding: 1rem 0;
+}
+//padding 
+//bg colors 
+
+.bg {
+ &-light {
+  background: $light-color
+ }
+}
+
+.center-text{
+ text-align: center;
+}
+
+.py-1 {padding: 1rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+.py-4 {padding: 4rem 0;}
+.py-5 {padding: 5rem 0;}

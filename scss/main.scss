@@ -1,0 +1,691 @@
+@import "variables";
+@import "utilities";
+@import "work--section";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+// responsive images
+img {
+  max-width: 100%;
+}
+
+// header
+
+#header {
+  &-home {
+  height: 100vh;
+  background: $bg-img no-repeat center center/cover;
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 3rem;
+    
+
+    .logo {
+      width: 50px;
+      
+    }
+    .nav__list {
+      display: flex;
+    }
+
+    .nav__item {
+      padding: 1rem 1.5rem;
+    }
+    a {
+      color: $light-color;
+      text-transform: uppercase;
+      padding-bottom: .5rem;
+      border-bottom: 3px solid transparent;
+      transition: border-color 200ms ease-in;
+      &:hover {
+        border-color: $medium-color;
+      }
+      &.current {
+       border-color: $main-color;
+      }
+    }
+  }
+.current {
+  border-bottom: 5px solid $main-color;
+  width: 100%;
+}
+.showcase {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  //pull it down
+  padding-top: 20%;
+  h1 {
+   font-size: 4rem;
+   line-height: 1.1;
+  }
+  p {
+    font-size: 20px;
+    padding-bottom: 1.5rem;
+  }
+
+ }
+  // .btn {
+  //   display: inline-block;
+  //   border: none;
+  //   cursor: pointer;
+  //   background: $light-color;
+  //   color: $dark-color;
+  //   padding: 1rem 2.5rem;
+  //   margin-top: 1rem;
+  //   transition: all 200ms ease-in;
+  //   &:hover {
+  //     background: $main-color;
+  //     color: $light-color;
+  //   }
+  // }
+}
+
+//header inner pages 
+ &-inner  {
+ height: 100px;
+ background: $bg-img no-repeat 20% 30%/cover;
+ border-bottom: 3px solid $main-color;
+
+ .logo {
+   width: 3rem;
+  //  border: 1px solid red;
+ }
+ .nav {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+   a {
+      color: $light-color;
+      text-transform: uppercase;
+      padding-bottom: .5rem;
+      border-bottom: 3px solid transparent;
+      transition: border-color 200ms ease-in;
+      &:hover {
+        border-color: $medium-color;
+      }
+      &.current {
+       border-color: $main-color;
+      }
+    }
+   .nav__list {
+     display: flex;
+
+      .nav__item{
+       padding: .5rem 1.5rem;
+      }
+   }
+ }
+}
+ }
+
+
+// section speciality
+
+.speciality {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 2rem;
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      font-weight: 900;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 80px;
+        height: 3px;
+        width: 50px;
+        background: $main-color;
+      }
+    }
+    p {
+      margin-top: 1rem;
+      font-size: 20px;
+    }
+  }
+  .grid__4 {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    align-items: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      i {
+        color: $main-color;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+// awards bg colors
+.bg__gray {
+  background: $medium-color;
+}
+.bg__light {
+  background: #f4f4f4;
+}
+section.awards {
+  padding-top: 2rem;
+
+  .grid__4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    min-height: 250px;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      i {
+        font-size: 3rem;
+      }
+
+      h3 {
+        margin: 1rem 0;
+      }
+      p {
+        font-weight: bold;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+//section three
+
+.section___three {
+  .intro {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 0;
+
+    //intro h2 styles
+    h2 {
+      text-transform: uppercase;
+      font-size: 2.4rem;
+      font-weight: 900;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 140px;
+        height: 3px;
+        width: 50px;
+        background: $main-color;
+      }
+    }
+    p {
+      padding-top: 1rem;
+      font-size: 1.4rem;
+    }
+    //end of intro
+  }
+  .grid__4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 3rem;
+    grid-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    div {
+      // border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      i {
+        height: 120px;
+        width: 120px;
+        line-height: 120px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 3rem;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        color: $light-color;
+        background: $dark-color;
+        margin-bottom: 1.1rem;
+        position: relative;
+        transition: all 200ms ease-in;
+        &:hover {
+          transform: scale(1.2);
+          background: $main-color;
+          &::after{
+           background: $dark-color;
+          }
+        }
+        &::after {
+          content: "1";
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 50px;
+          width: 50px;
+          border-radius: 50%;
+          background: $main-color;
+          text-align: center;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          &:hover {
+           background: $dark-color;
+          }
+        }
+        h3{
+         padding-bottom: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+// ABOUT PAGE
+
+#about {
+&-one {
+  .header {
+   text-align: center;
+   h2 {
+     padding-bottom: 1rem;
+     font-size: 2.3rem;
+     font-weight: 300;
+   }
+  }
+  .img {
+    align-self: flex-start;
+    height: 250px;
+  }
+  .row {
+    
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    .content {
+      border-left: 3px solid $main-color;
+      padding: 1rem;
+      background: $light-color;
+      h3 {
+        text-align: center;
+        // padding: 1rem 0;
+      }
+    }
+  }
+}
+&-two {
+
+  .award-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    grid-gap: 2rem;
+    div {
+      text-align: center;
+      .fas {
+        padding: 1rem 0;
+        color: $main-color;
+      }
+    }
+  }
+}
+&-three {
+  background: $dark-color;
+  color: #fff;
+  .title {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  .progress {
+    padding: 1rem 0;
+    p {
+      text-transform: uppercase;
+      font-weight: 900;
+      padding-bottom: .4rem;
+    }
+
+    .one {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 1rem;
+      background: $main-color;
+      border-radius: 20px;
+      overflow: auto;
+
+      .fullbar {
+        width: 100%;
+        height: 100%;
+        background: $main-color;
+        color: $main-color;
+      }
+    }
+
+    .two {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin-bottom: 1rem;
+      background: $main-color;
+      border-radius: 20px;
+      //right side not showing the curve so i put overflow : auto
+      overflow: auto;
+      .two_5 {
+        // display: inline-block;
+        height: 100%;
+        width: 30%;
+        background: $medium-color;
+        text-align: end;
+        color: $medium-color;
+        //push the gray color to the right
+        margin-left: auto;
+      }
+    }
+    .three {
+       width: 100%;
+      height: 100%;
+      display: flex;
+      margin-bottom: 1rem;
+      background: $main-color;
+      border-radius: 20px;
+      overflow: auto;
+    }
+    .six_5 {
+      width: 35%;
+      height: 100%;
+      background: $medium-color;
+      margin-left: auto;
+      color: $medium-color;
+    }
+      
+    }
+    .four {
+       width: 100%;
+      height: 100%;
+      display: flex;
+      margin-bottom: 1rem;
+      background: $main-color;
+      border-radius: 20px;
+      overflow: auto;
+      .fullbar{
+        width: 100%;
+        height: 100%;
+        color: $main-color;
+      }
+    }
+    .five {
+      display: flex;
+      background: $main-color;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      margin-bottom: 1rem;
+      border-radius: 20px;
+      .seven_5 {
+        background: $medium-color;
+        height: 100%;
+        width: 25%;
+        margin-left: auto;
+        color: $medium-color;
+      }
+    }
+    .six {
+      display: flex;
+      background: $main-color;
+      height: 100%;
+      width: 100%;
+      overflow: auto;
+      margin-bottom: 1rem;
+      border-radius: 20px;
+      .six_5 {
+        margin-left: auto;
+        height: 100%;
+        width:35%;
+        background: $medium-color;
+        color: $medium-color;
+      }
+    }
+  }
+  // logos
+  &-four {  
+    .banner {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 2rem;
+
+      // img {
+      //   width: 70%;
+      // }
+    }
+  }
+  &-five {
+    .content {
+    text-align: center;
+      .title {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+    }
+    .card-container {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: .5rem;
+
+      .card {
+        border: 1px solid $medium-color;
+        padding: 1rem;
+        border-radius: 5px;
+      }
+    }
+    .persons-container {
+      display:grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: .5rem;
+    }
+    .person{
+      height: 50px;
+      line-height: 50px;
+      margin: 1rem 0;
+      //to display image next to name i use flex
+      display: flex;
+      img {
+      display: inline-block;
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+      }
+      p {
+        padding-left: 1rem;
+      }
+    }
+  }
+  
+  }
+
+// work page .... I should learn to avoid repetition of code.
+// code should be reusable . No need to always be copying the
+// the styles for the header everytime 
+//========================== WORK PAGE ========================>
+// ABOUT PAGE
+
+  
+
+// contact page 
+
+
+#contact {
+  &-a {
+    .contact-form {
+     
+      .form-group-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 1rem;
+
+        .form-group {
+          label {
+            display: block;
+          }
+          input {
+            width: 100%;
+            padding-left: 1.5rem;
+            height: 40px;
+
+          }
+          
+        }
+      }
+      textarea{
+        display: block;
+        height: 100px;
+        width: 100%;
+        margin-top: 1.5rem;
+        padding: .5rem 2rem;
+      }
+      input.btn {
+        margin-top: 70px;
+        display: block;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 50px;
+        line-height: 50px;
+        background: $dark-color;
+        color: #fff;
+        border: none;
+        transition: background 200ms ease-in;
+        &:hover {
+          background: $main-color;
+        }
+      }
+    }
+  }
+  &-b {
+    .details-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      justify-content: center;
+      align-items: center;
+     div {
+       
+       text-align: center;
+       color: #fff;
+       padding: 1rem .5rem;
+       .fas , p {
+         margin: .4rem 0;
+       }
+     } 
+    }
+  }
+  &-c {
+    h1 {
+      font-size: 5rem;
+      color: #fff;
+    }
+  }
+}
+@import "media";
+
+
+
+
+
+
+
+
+
+//footer 
+
+.footer {
+ background: $dark-color;
+ color: #fff;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding:  2rem;
+//  margin-top: 2rem;
+ .social__nav{
+  display: flex;
+
+  li {
+  margin-right: 1rem;
+
+  i {
+   height: 40px;
+   width: 40px;
+   line-height: 40px;
+   text-align: center;
+   // background: transparent;
+   border: 2px solid #fff;
+   border-radius: 50%;
+   // display: flex;
+   // justify-content: center;
+   // align-items: center;
+  
+  }
+  }
+ }
+}

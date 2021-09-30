@@ -1,0 +1,97 @@
+// Tablets and Smaller
+
+@media(max-width: 800px) {
+ #header-home {
+  height: 30rem;
+
+  .showcase{
+   padding-top: 5rem;
+  }
+ }
+}
+
+// smartphones
+
+@media (max-width: 500px) {
+ .nav{
+  flex-direction: column;
+  align-items: center;
+  li {
+   padding: 1rem;
+  }
+ }
+ #header{
+  &-home {
+   height: 10rem;
+
+   .showcase {
+    display: none;
+   }
+  }
+  &-inner {
+   height: 10rem;
+   background-position: 20%  30%;
+  }
+ }
+ // stack grid columns
+.speciality .grid__4,
+section.awards .grid__4,
+.section___three .grid__4,
+#about-one .row,
+#about-two .award-container,
+#about-five .card-container,
+#about-five .persons-container,
+.project-container,
+#contact-a .contact-form .form-group-container,
+#contact-b .details-container {
+   grid-template-columns: 1fr;
+ }
+   .speciality .grid__4 div {
+    border-bottom: 1px $light-color solid;
+    padding-bottom: 1rem;
+    &:last-child {
+     border: none;
+     padding: 0;
+    }
+   }
+   
+section.awards .grid__4 div {
+ padding: 2rem 0 1rem 0;
+}
+
+#contact-b .details-container div {
+ border-bottom: 1px #444 solid;
+ padding-bottom: 1rem;
+ &:last-child {
+  border: none;
+  padding-bottom: 0;
+ }
+}
+
+#contact-c h1 {
+ font-size: 2rem;
+}
+
+// footer 
+.footer {
+ flex-direction: column;
+ .socials {
+  margin: 1rem 0;
+ }
+}
+ }
+
+ //Landscape
+
+ @media (max-height: 580px) {
+  #header-home .showcase {
+   padding-top: 3rem;
+  }
+ }
+
+ // iphone 5SE LANDSCAPE MODE
+ @media(max-height: 380px) {
+  #header-home .showcase h1 {
+   font-size: 2rem;
+  }
+ }
